@@ -1,0 +1,52 @@
+{
+    "videos": [
+        {
+          "id": 1,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "The weeknd - Starboy",
+          "youtubeId": "xizN47Box_Y",
+          "description": "Video figi"
+        },
+        {
+          "id": 2,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "Calvin harris - Blame",
+          "youtubeId": "6ACl8s_tBzE",
+          "description": ""
+        },
+        {
+          "id": 3,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "Deadmau5 - Strobe",
+          "youtubeId": "tKi9Z-f6qX4",
+          "description": ""
+        },
+        {
+          "id": 4,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "Rage against the machine - killing in the name ",
+          "youtubeId": "bWXazVhlyxQ",
+          "description": ""
+        },
+        {
+          "id": 5,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "Link park - numb",
+          "youtubeId": "kXYiU_JCYtU",
+          "description": ""
+        },
+        {
+          "id": 6,
+          "cover":
+            "https://www.publicidadenaweb.com/wp-content/uploads/2019/01/videos-youtube.jpg",
+          "title": "Bruno Mars - Uptown Funk",
+          "youtubeId": "OPf0YbXqDm0",
+          "description": ""
+        }
+      ]
+}

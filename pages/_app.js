@@ -1,16 +1,19 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Lato, sans-serif;
   }
 `
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    gray: 'hsl(0deg 0% 96%)',
+    primary: 'blueviolet',
+    secondary: 'red'
   },
 }
 
