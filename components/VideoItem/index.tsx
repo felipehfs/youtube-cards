@@ -1,26 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Wrapper } from './VideoItem.styles'
 import { useRouter } from 'next/router';
+import Video from '../../models/video'
+import Image from 'next/image'
+
+interface VideoItemProps {
+    data: Video;
+}
 
 export default function VideoItem({
     data
-}) {
+}: VideoItemProps) {
     const router = useRouter();
 
     return (
         <Wrapper onClick={() => router.push(`/videos/${data.id}`)}>
-            <img src={data.cover} alt={data.title} />
+            <Image src={data.cover} alt={data.title}  width="90%" height="70" layout="responsive"/>
             <h3>{data.title}</h3>
             <p>{data.description}</p>
         </Wrapper>
     )
-}
-
-VideoItem.propTypes = {
-    data: PropTypes.shape({
-        cover: PropTypes.string,
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string,
-    }).isRequired,
 }

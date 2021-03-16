@@ -26,4 +26,10 @@ export const Content = styled.div`
     box-shadow: 2px 2px 4px #ccc;
     border-radius: 4px;
     animation: ${fadeIn} .3s;
+
+    @media(max-width: 500px) {
+        margin: 0;
+        max-width: 100%;
+        min-height: 100vh;
+    }
 `

@@ -1,6 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 import {Wrapper, Label, Input} from './TextField.styles';
+
+type InputChangeEvent = (event: React.FormEvent<HTMLInputElement>) => void;
+
+interface TextFieldProps extends HTMLInputElement{
+    label: string;
+    onChange: InputChangeEvent;
+}
 
 export default function TextField({
     label,
@@ -8,7 +14,7 @@ export default function TextField({
     onChange,
     type="text",
     name
-}) {
+}: TextFieldProps) {
     return (
         <Wrapper>
             <Label htmlFor={label}>{label}</Label>
@@ -17,10 +23,3 @@ export default function TextField({
     )
 }
 
-TextField.propTypes = {
-    label: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    type: PropTypes.string,
-    id: PropTypes.string,
-}

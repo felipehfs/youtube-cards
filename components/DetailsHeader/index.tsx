@@ -1,11 +1,14 @@
 import React from 'react'
 import {Header} from './DetailsHeader.styles';
 import {Button} from '../Button';
-import PropTypes from 'prop-types';
+
+interface DetailsHeaderProps {
+    onGoBack: () => void;
+}
 
 export default function DetailsHeader({
     onGoBack
-}) {
+}: DetailsHeaderProps) {
     return (
         <Header>
             <Button onClick={onGoBack}>Voltar</Button>
@@ -13,6 +16,3 @@ export default function DetailsHeader({
     )
 }
 
-DetailsHeader.propTypes = {
-    onGoBack: PropTypes.func.isRequired,
-}

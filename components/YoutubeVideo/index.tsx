@@ -1,10 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+interface YoutubeVideoProps {
+    [key:string]: unknown;
+    youtubeId: string;
+}
 
 export default function YoutubeVideo({
     youtubeId,
     ...props
-}) {
+}: YoutubeVideoProps) {
     return (
         <iframe 
             src={`http://www.youtube.com/embed/${youtubeId}`} 
@@ -14,8 +18,4 @@ export default function YoutubeVideo({
             {...props}
         />
     )
-}
-
-YoutubeVideo.propTypes = {
-    youtubeId: PropTypes.string.isRequired
 }

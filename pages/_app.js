@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: Lato, sans-serif;
   }
+  html {
+    overflow-x: hidden;
+  }
 `
 
 const theme = {
