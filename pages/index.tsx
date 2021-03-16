@@ -2,6 +2,7 @@ import DefaultLayout from "../components/layout/defaultLayout";
 import Gallery from "../components/gallery";
 import Button from "../components/Button";
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
 
 export default function Home({ videos }) {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function Home({ videos }) {
 }
 
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch(`http://localhost:3004/videos`);
   const data = await response.json();
 

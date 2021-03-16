@@ -17,7 +17,7 @@ export default function CreateVideos() {
   });
   const router = useRouter();
 
-  const handleOnChange = (event) => {
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormValues({...formValues, [event.target.name]: event.target.value });
   }
 

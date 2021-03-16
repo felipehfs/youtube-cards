@@ -1,10 +1,13 @@
 import React from 'react'
 import {Wrapper, Label, Input} from './TextField.styles';
 
-type InputChangeEvent = (event: React.FormEvent<HTMLInputElement>) => void;
+type InputChangeEvent = (event: React.ChangeEvent<HTMLInputElement>) => void;
 
-interface TextFieldProps extends HTMLInputElement{
+interface TextFieldProps {
     label: string;
+    value: string,
+    name: string;
+    type?: string;
     onChange: InputChangeEvent;
 }
 
