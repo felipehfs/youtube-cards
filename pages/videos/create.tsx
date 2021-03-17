@@ -3,6 +3,7 @@ import TextField from "../../components/forms/TextField";
 import Button from "../../components/Button";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/client";
 
 
 const styles = { marginTop: '10px', display: "flex", justifyContent: "flex-end" };
@@ -16,6 +17,7 @@ export default function CreateVideos() {
     cover: ''
   });
   const router = useRouter();
+  const [session, loading] = useSession()
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormValues({...formValues, [event.target.name]: event.target.value });
@@ -37,6 +39,10 @@ export default function CreateVideos() {
       console.error(err);
     }
   };
+
+  if (!session) {
+    return <h1>Unauthorized</h1>
+  }
 
   return (
     <DefaultLayout>
